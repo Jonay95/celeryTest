@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'celeryTest',
-    'django_celery_results',  # Agrega django_celery_results para almacenar los resultados de las tareas
     'numeros',
 ]
 
