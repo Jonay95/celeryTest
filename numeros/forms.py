@@ -1,9 +1,5 @@
-# numbersapp/forms.py
-
 from django import forms
-from .models import NumberRecord
 
-class OperationForm(forms.ModelForm):
-    class Meta:
-        model = NumberRecord
-        fields = ['number1', 'number2']
+class SumForm(forms.Form):
+    number1 = forms.IntegerField(label='Número 1')
+    number2 = forms.IntegerField(label='Número 2')

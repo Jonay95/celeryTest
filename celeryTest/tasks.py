@@ -8,9 +8,8 @@ def add(x, y):
     return x + y
 
 @shared_task
-def print_message():
+def notify_db_change_task(record_id, number1, number2, result):
     try:
-        record = NumberRecord.objects.get(id=1)
-        print(f"hola mundo, {datetime.now()}, Resultado: {record.result}")
+       print(f"CAMBIO EN BASE DE DATOS REGISTRADO: ID={record_id}, number1={number1}, number2={number2}, result={result}")
     except NumberRecord.DoesNotExist:
         print("Registro con ID 1 no encontrado.")
