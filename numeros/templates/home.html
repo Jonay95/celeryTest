@@ -1,0 +1,23 @@
+<!-- numbersapp/templates/home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sumar Números</title>
+</head>
+<body>
+    <h1>Sumar Números</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sumar</button>
+    </form>
+
+    <h2>Operaciones Guardadas</h2>
+    <ul>
+        {% for operation in operations %}
+            <li>{{ operation.number1 }} + {{ operation.number2 }} = {{ operation.result }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
