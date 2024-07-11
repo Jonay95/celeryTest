@@ -119,7 +119,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-CELERY_BROKER_URL = 'pyamqp://gespromo@200.234.226.215:5672//'
+CELERY_BROKER_URL = 'pyamqp://gespromo:a1b2c3d4e5@200.234.226.215:5672//'
 CELERY_RESULT_BACKEND = 'rpc://'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
